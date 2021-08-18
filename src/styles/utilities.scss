@@ -1,0 +1,21 @@
+/****** Layout ******/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+// Flex
+.flex{
+    display: flex;
+}
+.ai-center{
+    align-items: center;
+}
+.jc-center{
+    justify-content: center;
+}
+.jc-between{
+    justify-content: space-between;
+}
+.column{
+    flex-direction: column;
+}
