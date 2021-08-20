@@ -17,13 +17,13 @@ export default {
         Profile,
         Suggestions,
         RightFooter
-    }    
+    },
 }
 </script>
 
 <style lang="scss" scoped>
     .right{
         width: 40%;
-        background-color: rgb(134, 216, 132);
+        padding: 20px;
     }
 </style>

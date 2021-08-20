@@ -22,6 +22,5 @@ export default {
     .left{
         width: calc(60% - 50px);
         margin-right: 50px;
-        // background-color: rgb(204, 122, 186);
     }
 </style>

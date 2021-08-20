@@ -1,6 +1,6 @@
 <template>
     <div class="right-footer">
-
+        <p class="grey">&copy; 2020 INSTAGRAM FROM FACEBOOK</p>
     </div>
 </template>
 
@@ -12,7 +12,6 @@ export default {
 
 <style lang="scss" scoped>
     .right-footer{
-        padding: 20px;
-        background-color: rgb(255, 0, 191);
+        margin-top: 60px;
     }
 </style>

@@ -22,6 +22,9 @@ export default {
         this.populateStories();
     },
     methods:{
+        /**
+         * Populate Stories with API
+         */
         populateStories(){
             axios.get('https://flynn.boolean.careers/exercises/api/boolgram/profiles')
             .then(res => {
@@ -40,7 +43,6 @@ export default {
 <style lang="scss" scoped>
     .stories{
         padding: 30px 40px;
-        // background-color: rgb(93, 21, 209);
         border: 1px solid #bbb;
         border-radius: 3px;
     }
