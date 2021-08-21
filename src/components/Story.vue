@@ -2,7 +2,7 @@
     <div class="story-wrap flex column jc-center ai-center">
         <!-- Image -->
         <div class="img-wrap">
-            <img class="story-img" :src="image" alt="story">
+            <img class="story-img" :src="image" :alt="name">
         </div>
         <!-- Name -->
         <div class="name">{{name}}</div>
