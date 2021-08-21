@@ -46,8 +46,8 @@
             <div class="time grey">{{time}}</div>
             <!-- My Comment -->
             <div class="my-comment flex jc-between ai-center">
-                <input type="text" placeholder="Aggiungi un commento">
-                <div class="link">Pubblica</div>
+                <input type="text" placeholder="Aggiungi un commento" v-model="myComment.text"  @keyup.enter="publish">
+                <div class="link" @click="publish">Pubblica</div>
             </div>
         </div>
     </div>
@@ -73,18 +73,32 @@ export default {
     },
     data(){
         return{
+            myComment: {
+                username: 'Marco.B',
+                text: '',
+            },
             show: false,
             time: '',
         }
     },
     created(){
-        // dayjs.locale('it');
-        // dayjs.extend(require('dayjs/plugin/relativeTime'));
         this.time = dayjs().to(dayjs(this.date.date));
     },
     methods: {
+        /**
+         * Toggle all comments visibility
+         */
         toggle(){
             this.show = !this.show;
+        },
+
+        /**
+         * Publish my comment
+         */
+        publish(){
+            const comm = {...this.myComment};
+            this.comments.unshift(comm);
+            this.myComment.text = '';
         }
     }
 }
