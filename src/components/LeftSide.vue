@@ -1,7 +1,7 @@
 <template>
     <div class="left">
-        <StoriesBlock/>
-        <PostsBlock/>
+        <StoriesBlock :wait="wait"/>
+        <PostsBlock :wait="wait"/>
     </div>
 </template>
 
@@ -14,6 +14,9 @@ export default {
     components:{
         StoriesBlock,
         PostsBlock
+    },
+    props:{
+        wait: Boolean,
     }
 }
 </script>

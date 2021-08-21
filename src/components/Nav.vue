@@ -31,7 +31,8 @@ export default {
         width: 100%;
         padding: 15px;
         background-color: #fff;
-        border-bottom: 1px solid #bbb;
+        border-bottom: 1px solid #ddd;
+        z-index: 10;
 
         .logo{
             max-height: 40px;
@@ -42,7 +43,8 @@ export default {
             width: 200px;
             padding: 8px;
             text-align: center;
-            border: 1px solid #bbb;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
         }
 
         .icons{

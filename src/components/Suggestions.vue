@@ -5,12 +5,24 @@
             <div class="bold">Mostra tutti</div>
         </div>
         <!-- People -->
-        <div class="suggest flex jc-between" v-for="(person, index) in people" :key="index">
-            <div class="flex ai-center">
-                <img :src="person.profile_picture" :alt="person.profile_name">
-                <div class="bold">{{person.profile_name}}</div>
+        <div v-if="!wait" >
+            <div class="suggest flex jc-between" v-for="(person, index) in people" :key="index">
+                <div class="flex ai-center">
+                    <img :src="person.profile_picture" :alt="person.profile_name">
+                    <div class="bold">{{person.profile_name}}</div>
+                </div>
+                <div class="link">Segui</div>
             </div>
-            <div class="link">Segui</div>
+        </div>
+        <!-- Skeleton Loading -->
+        <div v-else>
+            <div class="suggest flex ai-center" v-for="n in 8" :key="n">
+                <div class="circle"></div>
+                <div class="lines">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -20,6 +32,9 @@ import axios from 'axios';
 
 export default {
     name: 'Suggestions',
+    props:{
+        wait: Boolean,
+    },
     data(){
         return {
             people: [],
@@ -65,6 +80,28 @@ export default {
             object-fit: cover;
             margin-right: 20px;
             border-radius: 50%;
+        }
+
+        .circle{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: #efefef;
+            border: 1px solid #ddd;
+        }
+
+        .line1,
+        .line2{
+            height: 10px;
+            background-color: #efefef;
+        }
+        .line1{
+            width: 120px;
+        }
+        .line2{
+            margin-top: 5px;
+            width: 70px;
         }
     }
 </style>

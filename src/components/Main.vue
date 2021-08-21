@@ -1,7 +1,7 @@
 <template>
     <div class="main-content container flex jc-between">
-        <LeftSide/>
-        <RightSide/>
+        <LeftSide :wait="wait"/>
+        <RightSide :wait="wait"/>
     </div>
 </template>
 
@@ -13,6 +13,24 @@ export default {
     components:{
         LeftSide,
         RightSide
+    },
+    data(){
+        return{
+            wait: true,
+        }
+    },
+    created(){
+        this.makeWait();
+    },
+    methods:{
+        /**
+         * Simulate wait
+         */
+        makeWait(){
+            setTimeout(() => {
+                this.wait = false;
+            }, 3000);
+        }
     }
 }
 </script>

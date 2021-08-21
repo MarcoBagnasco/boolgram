@@ -1,7 +1,7 @@
 <template>
     <div class="right">
         <Profile/>
-        <Suggestions/>
+        <Suggestions :wait="wait"/>
         <RightFooter/>
     </div>
 </template>
@@ -18,6 +18,9 @@ export default {
         Suggestions,
         RightFooter
     },
+    props:{
+        wait: Boolean,
+    }
 }
 </script>
 

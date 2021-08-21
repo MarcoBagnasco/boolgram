@@ -107,7 +107,7 @@ export default {
 <style lang="scss" scoped>
 .post{
     margin-bottom: 50px;
-    border: 1px solid #bbb;
+    border: 1px solid #ddd;
     border-radius: 3px;
     overflow: hidden;
 
@@ -185,7 +185,7 @@ export default {
 
         .my-comment{
             padding: 20px;
-            border-top: 1px solid #bbb;
+            border-top: 1px solid #ddd;
             input{
                 font-size: 1.2rem;
                 border: 0;
