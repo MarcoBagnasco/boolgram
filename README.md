@@ -1,4 +1,6 @@
-# boolgram
+# Boolgram
+
+### Instagram replica (Italian Version)
 
 ## Project setup
 ```
