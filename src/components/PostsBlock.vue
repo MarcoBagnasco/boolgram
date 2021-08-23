@@ -21,7 +21,7 @@
                     <div class="line2"></div>
                 </div>
             </div>
-            <div class="picture"></div>
+            <div class="picture loading"></div>
         </div>
     </div>
 </template>

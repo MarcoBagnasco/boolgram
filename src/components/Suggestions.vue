@@ -18,7 +18,7 @@
         <div v-else>
             <div class="suggest flex ai-center" v-for="n in 8" :key="n">
                 <div class="circle"></div>
-                <div class="lines">
+                <div class="loading">
                     <div class="line1"></div>
                     <div class="line2"></div>
                 </div>
@@ -102,6 +102,13 @@ export default {
         .line2{
             margin-top: 5px;
             width: 70px;
+        }
+
+        .loading{
+            &::after{
+                width: 350%;
+                height: 350%;
+            }
         }
     }
 </style>

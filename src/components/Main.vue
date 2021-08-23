@@ -29,7 +29,7 @@ export default {
         makeWait(){
             setTimeout(() => {
                 this.wait = false;
-            }, 3000);
+            }, 4000);
         }
     }
 }
