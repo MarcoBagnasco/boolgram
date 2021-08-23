@@ -1,6 +1,6 @@
 # Boolgram
 
-### Instagram replica (Italian Version)
+### Instagram layout replica with fake data (Italian Version)
 
 ## Project setup
 ```
